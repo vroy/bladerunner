@@ -1,0 +1,41 @@
+<pre class="pre-scrollable prettyprint lang-sql"><%= @sql %></pre>
+
+<div data-run-filename="<%= @filename %>"></div>
+<div data-run-timestamp="<%= @timestamp %>"></div>
+
+<% if @error_message.present? %>
+  <p class="lead text-danger">
+    Oops, looks like there is something wrong with your query ☹
+
+  </p>
+  <pre><%= @error_message %></pre>
+
+<% else %>
+  <%= render partial: "query_info" %>
+  <div class="sql-query-results">
+    <table class="table table-bordered table-condensed table-hover">
+      <tbody>
+        <% @rows.each_with_index do |row, index| %>
+          <% if index % 10 == 0 %>
+            <tr class="warning">
+              <% @fields.each do |column| %>
+                <th nowrap="nowrap"><%= column.humanize %></th>
+              <% end %>
+            </tr>
+          <% end %>
+          <tr data-action="open-results-modal">
+            <% @fields.each do |column| %>
+              <td>
+                <div rel="popover" title="<%= column.humanize %>" data-content="<%= row[column] %>">
+                  <%= row[column].to_s.truncate(50) %>
+                </div>
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <%= render partial: "query_info" %>
+
+<% end %>

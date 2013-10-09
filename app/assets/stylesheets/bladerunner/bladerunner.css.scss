@@ -1,0 +1,17 @@
+body {
+  padding-bottom: 400px;
+}
+
+#container {
+  padding: 0px 15px;
+}
+
+.pre-scrollable {
+  border-radius: 0px;
+  height: 200px;
+  max-height: 200px;
+}
+
+[data-action=open-results-modal] {
+  cursor: pointer;
+}

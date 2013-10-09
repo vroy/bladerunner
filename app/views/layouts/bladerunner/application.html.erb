@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bladerunner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag    "bladerunner/application", :media => "all" %>
+    <%= javascript_include_tag "bladerunner/application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+     <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to "Bladerunner", root_path, class: "navbar-brand" %>
+      </div>
+
+       <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <% [ ["Files", root_path] ].each do |name, path| %>
+            <li <%= "class=active" if current_page?(path) %>><%= link_to name, path %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    <div id="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

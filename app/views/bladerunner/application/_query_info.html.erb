@@ -1,0 +1,8 @@
+<% if @rows or @timing_in_milliseconds %>
+  <p class="lead text-muted">
+    <% if @rows %>
+      <strong><%= number_with_delimiter @rows.size %></strong> row<% if @rows.size != 1 %>s<% end %>;
+    <% end %>
+    <%= number_with_precision @timing_in_milliseconds, precision: 2 %>ms
+  </p>
+<% end %>

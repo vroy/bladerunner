@@ -1,0 +1,14 @@
+<table class="results-table table table-bordered table-condensed table-hover">
+  <thead>
+    <tr>
+      <th>Filename</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @filenames.each do |filename| %>
+      <tr>
+        <td><%= link_to filename, run_path(filename: filename) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
