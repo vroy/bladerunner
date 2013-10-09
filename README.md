@@ -4,7 +4,7 @@ Edit SQL files in your Rails project with your favourite editor; View results in
 
 I've never found an SQL editor/runner that I liked for PostgreSQL, so why not profit from Rails and an active connection to your database to solve this problem? Write SQL files in `bladerunner/*.sql` and open your browser to the mounted path to see your queries and run them.
 
-Quick little screencast demo of the functionality: http://www.youtube.com/watch?v=r1858nYdQQk
+Watch a [demo](http://www.youtube.com/watch?v=r1858nYdQQk).
 
 **WARNING:** Bladerunner does NOT prevent anything nasty from happening, operate at your own risk.
 
