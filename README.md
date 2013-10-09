@@ -51,5 +51,6 @@ Tested on:
 * Refactor & move logic out of controller.
 * Improved realtime support (vs. the current polling).
 * Ability to run ruby code the same way.
-* Some tests
-* Scrolling table support for results (sticky header)
+* Some tests.
+* Scrolling table support for results (sticky header).
+* Log every query ran in `log/bladerunner.log` for future reference.

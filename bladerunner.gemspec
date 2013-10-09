@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Vincent Roy"]
   s.email       = ["vincentroy8@gmail.com"]
   s.homepage    = "https://github.com/exploid/bladerunner"
-  s.summary     = "Edit SQL files in your Rails project with your favourite editor; View results in your browser in realtime as your files are saved."
-  s.description = ""
+  s.summary     = "Bladerunner - the best SQL runner for your Rails projects"
+  s.description = "Edit SQL files in your Rails project with your favourite editor; View results in your browser in realtime as your files are saved."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
