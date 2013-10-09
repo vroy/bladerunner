@@ -13,7 +13,7 @@ Quick little screencast demo of the functionality: http://www.youtube.com/watch?
 Add bladerunner to your Gemfile:
 
 ```ruby
-gem "bladerunner"
+gem "bladerunner", group: :development
 ```
 
 Add this to your `config/routes.rb` file to mount Bladerunner in your Rails app in development:
